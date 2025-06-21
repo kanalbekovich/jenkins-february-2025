@@ -35,7 +35,7 @@ podTemplate(cloud: 'kubernetes', label: 'terraform', yaml: template) {
 node ("terraform") {
     container ("terraform") {
     stage ("Checkout SCM") {
-        git branch: 'main', url: 'https://github.com/kaizenacademy/actions-terraform.git'
+        git branch: 'main', url: 'https://github.com/kanalbekovich/actions-terraform.git'
     }
 
 withCredentials([usernamePassword(credentialsId: 'aws-creds', passwordVariable: 'AWS_SECRET_ACCESS_KEY', usernameVariable: 'AWS_ACCESS_KEY_ID')]) {
